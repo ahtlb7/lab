@@ -1,0 +1,13 @@
+@startuml
+
+start
+:Ввод n (2–8);
+:x = -F;
+
+repeat
+  :y = x^n;
+  :Вывод x и y;
+  :x = x + 1;
+repeat while (x <= F)
+stop
+@enduml

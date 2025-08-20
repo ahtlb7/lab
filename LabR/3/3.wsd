@@ -1,0 +1,29 @@
+@startuml
+start
+
+:Ввод режима (1 или 2);
+
+switch (Режим)
+case (1)
+  :Ввод A, B, C;
+  :M = A + B + C;
+  :Вывод M;
+  break
+case (2)
+  :Ввод A, B, C;
+  :X = C / B;
+  :K = B / A;
+  if (X ≠ K?) then (Да)
+    :Y = (X * K) / (X - K);
+    :Вывод Y;
+  else (Нет)
+    :Ошибка: Деление на ноль;
+  endif
+  break
+case (другое)
+  :Ошибка: Неверный режим;
+  break
+endswitch
+
+stop
+@enduml
